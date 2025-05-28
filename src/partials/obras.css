@@ -1,0 +1,113 @@
+.obras {
+    background-color: #f8f8f8;
+    padding: 5%;
+    width: 100%;
+    max-width: 1280px;
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+.obras-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 5% 0;
+}
+
+.obras-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.obras-title h1 {
+    font-size: 2rem;
+    width: 70%;
+    line-height: 120%;
+    font-weight: 500;
+}
+
+.obras-title h1 b {
+    font-weight: 600;
+    background: linear-gradient(90deg, var(--color--green), var(--color--green--high));
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+
+.slide {
+    position: relative;
+    overflow: hidden;
+    margin: 0 1px;
+}
+.slide img {
+    width: 100%;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+.slide:hover .overlay {
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+}
+
+.obras-title p {
+    font-size: 1.2rem;
+    width: 75%;
+    line-height: 100%;
+}
+
+.obras-carrossel .slide img{
+    height: 350px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .obras{
+        padding: 10% 5%;
+    }
+
+    .obras-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .obras-title h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .obras-title p {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        padding-bottom: 30px;
+    }
+
+    .obras-carrossel .slide img{
+        height: 450px;
+    }
+}

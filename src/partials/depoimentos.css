@@ -1,0 +1,117 @@
+.depoimentos {
+    width: 100%;
+    padding: 5%;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    position: relative;
+    overflow: hidden;
+}
+
+.depoimentos-title{
+    padding: 0 0 5% 0;
+}
+
+.depoimentos-title h1 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.depoimentos-title h1 b {
+    font-weight: 600;
+    color: var(--color--red--high);
+}
+
+.depoimentos-container{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.depoimentos-card{
+    width: 47.5%;
+    padding: 30px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-shadow: 0 0 5px rgba(245, 82, 82, 0.1);
+    transition: all .5s ease!important;
+}
+
+.depoimentos-card:hover{
+    transform: scale(1.05)!important;
+    box-shadow: 0 0 10px rgba(245, 82, 82, 0.3);
+    cursor: default;
+}
+
+.depoimentos-card-top{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.depoimentos-perfil img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.depoimentos-card-texts{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.depoimentos-card-texts h4{
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color--red--high);
+}
+
+.depoimentos-card-texts span {
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.depoimentos-card-bottom p{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+@media (max-width: 768px){
+    .depoimentos{
+        padding: 10% 5%;
+    }
+
+    .depoimentos-title{
+        padding: 0% 0 15% 0;
+    }
+
+    .depoimentos-title h1{
+        font-size: 1.4rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .depoimentos-container {
+        gap: 25px;
+    }
+
+    .depoimentos-card:hover{
+        transform: scale(1.02)!important;
+    }
+
+    .depoimentos-card{
+        width: 100%;
+    }
+}

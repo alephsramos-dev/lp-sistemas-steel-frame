@@ -1,0 +1,224 @@
+.form {
+    height: auto;
+    width: 100%;
+    position: relative;
+    background-color: #353535;
+    overflow: hidden;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    position: relative;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.form-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-top img {
+    width: 200px;
+}
+
+.contactForm {
+    background-color: #303030;
+    padding: 30px;
+    width: 65%;
+}
+
+.form-title {
+    color: var(--color--white);
+    padding-bottom: 30px;
+}
+
+.form-title h1 {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.form-title h1 b {
+    font-weight: 500;
+}
+
+.contactForm div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 15px 0 ;
+}
+
+.contactForm div label{
+    border: 1px solid var(--color--white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 47%;
+    padding: 15px;
+}
+
+.contactForm div label span {
+    background-color: #303030;
+    position: absolute;
+    padding: 2px 5px;
+    left: 7px;
+    top: -10px;
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: var(--color--white);
+} 
+
+.contactForm div label input {
+    width: 100%;
+    height: 100%;
+    color: var(--color--white);
+}
+
+.label-complete {
+    width: 100%!important;
+    flex-direction: row!important;
+    gap: 30px;
+}
+
+.label-select{
+    width: 100%!important;
+    flex-direction: row!important;
+    justify-content: flex-start!important;
+    padding: 5px 15px!important;
+    border: 1px solid var(--color--white);
+    position: relative;
+}
+
+.select-option {
+    margin: 12px 4px!important;
+}
+
+.label-select span {
+    background-color: #303030;
+    position: absolute;
+    padding: 2px 5px;
+    left: 7px;
+    top: -10px;
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: var(--color--white);
+}
+
+.label-select div {
+    padding: 10px 20px;
+    background-color: var(--color--white);
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 500;
+    display: inline-block;
+    border: 2px solid transparent;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.label-select div.selected {
+    background-color: var(--color--green);
+    color: white;
+    border-color: var(--color--green--high);
+    transform: scale(1.05)!important;
+}
+
+
+.contactForm button {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--color--green);
+    color: var(--color--white);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all .2s ease!important;
+    border: 2px solid transparent;
+}
+
+.contactForm button:hover {
+    background-color: transparent;
+    border: 2px solid var(--color--green);
+    color: var(--color--green);
+}
+
+.contactForm button::before{
+    content: "";
+    position: absolute;
+    width: 200px; /* Ajuste conforme necessário */
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -200px;
+    opacity: 0.4;
+    animation: shine 2.5s ease-out infinite;
+}
+
+.contactForm p {
+    padding-top: 20px;
+    color: var(--color--white);
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
+@media (max-width: 768px){
+    .form-container {
+        padding: 10% 5%;
+    }
+    
+    .form-top img{
+        width: 150px;
+    }
+
+    .contactForm{
+        width: 100%;
+        padding: 0;
+        background-color: #353535;
+    }
+
+    .form-title{
+        padding-bottom: 20px;
+    }
+
+    .form-title h1{
+        font-size: 1.4rem;
+    }
+
+    .contactForm div label span{
+        font-size: 0.7rem;
+        background-color: #353535;
+    }
+
+    .contactForm div label input::placeholder{
+        font-size: 0.9rem;
+    }
+
+    .label-select {
+        padding: 15px 15px!important;
+    }
+
+    .select-option{
+        margin: 4px 2px!important;
+    }
+
+    .contactForm p {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,101 @@
+.sobre {
+    max-width: 1280px;
+    width: 100%;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0;
+    position: relative;
+    padding: 5%;
+    overflow: hidden;
+}
+
+.sobre-title {
+    width: 100%;
+    padding: 0 0 5% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sobre-title h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    width: 40%;
+    line-height: 100%;
+}
+
+.sobre-title h1 b {
+    font-weight: 600;
+    color: var(--color--red--high);
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.sobre-card {
+    width: 47.5%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f1f1f1;
+    padding: 30px;
+    transform: all .1s ease!important;
+}
+
+.sobre-card:hover {
+    transform: scale(1.05)!important;
+}
+
+.sobre-card img {
+    width: 100px;
+    height: 100px;
+    padding-bottom: 20px;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-position: center;
+}
+
+.sobre-card h2 {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.sobre-card p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+@media (max-width: 768px){
+    .sobre {
+        padding: 10% 5%;
+    }
+
+    .sobre-title{
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 0 10% 0;
+    }
+
+    .sobre-title h1 {
+        font-size: 1.4rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sobre-container{
+        gap: 20px;
+    }
+
+    .sobre-card{
+        width: 100%;
+    }
+}

@@ -1,0 +1,311 @@
+.home {
+    height: auto;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    margin-bottom: 10vh;
+    overflow: hidden;
+}
+
+.home::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('/src/assets/background-home.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    clip-path: polygon(100% 0, 100% 40%, 61% 35%, 0 38%, 0 0);
+}
+
+.home::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    clip-path: polygon(100% 0, 100% 40%, 69% 35%, 0 35%, 0 0);
+}
+
+.home-container{
+    position: inherit;
+    padding: 0 5%;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.home-top {
+    padding: 7.5% 0 7.5% 0;
+    color: var(--color--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-title{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 75%;
+}
+
+.home-title h1{
+    font-size: 2rem;
+    width: 75%;
+    line-height: 130%;
+}
+
+.home-title h1 b {
+    font-weight: 600;
+    position: relative;
+}
+
+.home-title h1 b::before{
+    content: '';
+    height: 4px;
+    position: absolute;
+    color: transparent;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--color--white), var(--color--red--high));
+    z-index: -1;
+    animation: AnimateH1 3s linear forwards;
+}
+
+@keyframes AnimateH1 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.home-title p {
+    font-size: 1.1rem;
+    width: 75%;
+    font-weight: 300;
+}
+
+.home-bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 0 0 0;
+}   
+
+.home-image {
+    height: 600px;
+    width: 45%;
+    position: relative;
+}
+
+.home-image img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.home-image div{
+    width: 150px;
+    position: absolute;
+    top: 0;
+    right: -2px;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.home-bottom-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.home-list-title {
+    width: 100%;
+    text-align: left;
+    margin-bottom: -30px;
+}
+
+.home-list-title h1 {
+    font-size: 2rem;
+}
+
+.home-list-title h1 b {
+    color: var(--color--red--high);
+    font-weight: 500;
+}
+
+.home-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.home-list ol {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.home-list ol li {
+    font-size: 1.1rem;
+    width: 80%;
+    position: relative;
+    top: 0;
+    line-height: 100%;
+    padding-left: 35px!important;
+    display: flex;
+    align-items: center;
+}
+
+.home-list ol:first-of-type li::before {
+    content: '';
+    background: url('/src/assets/check.svg') no-repeat center;
+    background-size: contain;
+    width: 22.5px;
+    height: 22.5px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.home-list ol:nth-of-type(2) li::before {
+    content: '';
+    background: url('/src/assets/error.png') no-repeat center; /* Ícone diferente */
+    background-size: contain;
+    width: 22.5px;
+    height: 22.5px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+@media (max-width: 768px){
+    .home {
+        min-height: none;
+        margin-bottom: 0;
+    }
+
+    .home::before{
+        clip-path: polygon(100% 0, 100% 45%, 61% 38%, 0 42%, 0 0);
+    }   
+
+    .home::after{
+        clip-path: polygon(100% 0, 100% 43%, 61% 38%, 0 40%, 0 0);
+    }   
+
+    .home-container{
+        padding: 2.5% 5% 0 5%;
+    }
+
+    .home-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home-title {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .home-title h1 {
+        width: 100%;
+        font-size: 1.3rem;
+        line-height: 120%;
+    }
+
+    .home-title h1 b::before{
+        height: 2px;
+    }
+
+    .home-title p {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .home-button {
+        margin-top: 20px;
+    }
+
+    .home-bottom {
+        flex-direction: column;
+        padding: 0;
+        position: relative;
+        top: -80px;
+    }
+
+    .home-image {
+        height: 300px;
+        width: 100%;
+        margin-top: 50px;
+        border: 3px solid #fff;
+        margin-bottom: 0px;
+    }
+
+    .home-image div{
+        display: none;
+    }
+
+    .home-bottom-right {
+        width: 100%;
+        gap: 20px;
+        padding-top: 30px;
+    }
+
+    .home-list {
+        margin-bottom: 0px;
+    }
+
+    .home-list-title{
+        text-align: left;
+        margin-bottom: 20px
+    }
+
+    .home-list-title h1 {
+        font-size: 1.4rem;
+    }
+
+    .home-list ol li {
+        font-size: 0.9rem;
+        width: 90%;
+        padding-left: 30px!important;
+    }
+
+    .home-list ol li::before{
+        width: 15px;
+        height: 15px;
+    }
+
+
+    .home-list-button{
+        display: none;
+    }
+}
